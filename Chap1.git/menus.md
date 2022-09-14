@@ -1,4 +1,4 @@
-## New candidate
+## Menu for Lunch
 
-- 쌀밥
+- 라면
 - 달걀
