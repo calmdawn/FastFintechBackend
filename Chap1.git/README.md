@@ -2,7 +2,7 @@
 
 This repo is to practice git.
 
-'<p>Paragraph</p>'
+`<p>Paragraph</p>`
 
 ## Index
 
