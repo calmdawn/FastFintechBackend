@@ -1,4 +1,4 @@
-## New candidate
+## Menus
 
-- 쌀밥
+- 잡곡밥
 - 달걀
