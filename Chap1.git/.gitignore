@@ -3,3 +3,4 @@
 *.go
 keyfile.*
 hidden/**
+*.DS_Store
