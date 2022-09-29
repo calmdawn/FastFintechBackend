@@ -1,4 +1,5 @@
 package date_22_09_26;
+//패키지가 선언된부분 밑부터 복사후 자신의 IDE(eclipse, Intellij)에 붙여넣으면 좀더 쉽게 볼 수 있음
 
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class Practice01 {
         Scanner scan = new Scanner(System.in);
         int[] scores = new int[10]; //학생 성적 10명을 저장할 배열을 생성
 
+        //예시로 성적을 1~10까지 입력받아보자.
         for (int i = 0; i < scores.length; i++) {   //i=0 부터,  i< scores배열의 길이(여기서는 10)가 될때까지, i값을 1씩 증가시키면서 반복한다
             scores[i] = scan.nextInt(); //scores 배열의 i번째 공간에 scan.nextInt()함수를 통해 성적을 입력받음
         }
@@ -25,20 +27,6 @@ public class Practice01 {
         System.out.println("평균 : " + avg);
         System.out.println("분산 : " + var);
         System.out.println("표준편차 : " + std);
-    }
-
-    //표준편차란? 분산의 제곱근 즉, 루트값이다
-    private static double getStandardDeviation(double var) {
-        return Math.sqrt(var);
-    }
-
-    //분산이란? 기존값들 각각에 대해 평균을 뺀 값의 제곱들의 합의 평균을 말한다.
-    private static double getVariance(int[] scores, double avg) {
-        double result = 0;  //분산을 저장할 변수
-        for (int i = 0; i < scores.length; i++) {
-            result = result + Math.pow(scores[i] - avg, 2); // result변수 = result변수에 있던값 + Math.pow((어떤학생- 학생들의 평균), 제곱)
-        }
-        return result / scores.length;  //제곱된 값들의 평균을 반환
     }
 
     //최대값을 구하는 함수.
@@ -74,4 +62,17 @@ public class Practice01 {
         return sum / scores.length; // 성적의 총합 / 학생수(여기서는 10)
     }
 
+    //표준편차란? 분산의 제곱근 즉, 루트값이다
+    private static double getStandardDeviation(double var) {
+        return Math.sqrt(var);
+    }
+
+    //분산이란? 기존값들 각각에 대해 평균을 뺀 값의 제곱들의 합의 평균을 말한다.
+    private static double getVariance(int[] scores, double avg) {
+        double result = 0;  //분산을 저장할 변수
+        for (int i = 0; i < scores.length; i++) {
+            result = result + Math.pow(scores[i] - avg, 2); // result변수 = result변수에 있던값 + Math.pow((어떤학생- 학생들의 평균), 제곱)
+        }
+        return result / scores.length;  //제곱된 값들의 평균을 반환
+    }
 }
