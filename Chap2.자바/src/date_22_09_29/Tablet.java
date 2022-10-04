@@ -3,7 +3,7 @@ package date_22_09_29;
 public class Tablet extends NoneMobileElectronic{
     boolean hasPencil;
 
-    public Tablet(int productNo, String modelName, String companyName, String dateOfMade, Auth authMethod, String address, boolean hasPencil) {
+    public Tablet(String productNo, String modelName, CompanyName companyName, String dateOfMade, AuthMethod[] authMethod, String address, boolean hasPencil) {
         super(productNo, modelName, companyName, dateOfMade, authMethod, address);
         this.hasPencil = hasPencil;
     }

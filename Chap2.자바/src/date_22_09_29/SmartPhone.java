@@ -4,7 +4,7 @@ public class SmartPhone extends MobileElectronic{
     int numOfCameras;
     int numOfSensors;
 
-    public SmartPhone(int productNo, String modelName, String companyName, String dateOfMade, Auth authMethod, Communication communicationMethod, int weight, int numOfCameras, int numOfSensors) {
+    public SmartPhone(String productNo, String modelName, CompanyName companyName, String dateOfMade, AuthMethod[] authMethod, Communication communicationMethod, int weight, int numOfCameras, int numOfSensors) {
         super(productNo, modelName, companyName, dateOfMade, authMethod, communicationMethod, weight);
         this.numOfCameras = numOfCameras;
         this.numOfSensors = numOfSensors;

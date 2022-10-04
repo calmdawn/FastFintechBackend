@@ -4,7 +4,7 @@ public class MobileElectronic extends Electronic{
     private Communication communicationMethod;
     private int weight;
 
-    public MobileElectronic(int productNo, String modelName, String companyName, String dateOfMade, Auth authMethod, Communication communicationMethod, int weight) {
+    public MobileElectronic(String productNo, String modelName, CompanyName companyName, String dateOfMade, AuthMethod[] authMethod, Communication communicationMethod, int weight) {
         super(productNo, modelName, companyName, dateOfMade, authMethod);
         this.communicationMethod = communicationMethod;
         this.weight = weight;

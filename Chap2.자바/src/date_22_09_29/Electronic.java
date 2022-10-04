@@ -1,13 +1,24 @@
 package date_22_09_29;
 
 public class Electronic {
-    private int productNo;
-    private String modelName;
-    private Company companyName;
-    private String dateOfMade;
-    private Auth authMethod;
+    String productNo;
+    String modelName;
+    private CompanyName companyName;
+    String dateOfMade;
+    AuthMethod[] authMethod;
 
-    public Electronic(int productNo, String modelName, Company companyName, String dateOfMade, Auth authMethod) {
+    public enum CompanyName {
+        SAMSUNG, LG, APPLE
+    }
+
+    public enum AuthMethod {
+        FINGER,
+        PATTERN,
+        FIN,
+        FACE
+    }
+
+    public Electronic(String productNo, String modelName, CompanyName companyName, String dateOfMade, AuthMethod[] authMethod) {
         this.productNo = productNo;
         this.modelName = modelName;
         this.companyName = companyName;
@@ -15,11 +26,11 @@ public class Electronic {
         this.authMethod = authMethod;
     }
 
-    public int getProductNo() {
+    public String getProductNo() {
         return productNo;
     }
 
-    public void setProductNo(int productNo) {
+    public void setProductNo(String productNo) {
         this.productNo = productNo;
     }
 
@@ -31,11 +42,11 @@ public class Electronic {
         this.modelName = modelName;
     }
 
-    public Company getCompanyName() {
+    public CompanyName getCompanyName() {
         return companyName;
     }
 
-    public void setCompanyName(Company companyName) {
+    public void setCompanyName(CompanyName companyName) {
         this.companyName = companyName;
     }
 
@@ -47,11 +58,11 @@ public class Electronic {
         this.dateOfMade = dateOfMade;
     }
 
-    public Auth getAuthMethod() {
+    public AuthMethod[] getAuthMethod() {
         return authMethod;
     }
 
-    public void setAuthMethod(Auth authMethod) {
+    public void setAuthMethod(AuthMethod[] authMethod) {
         this.authMethod = authMethod;
     }
 
